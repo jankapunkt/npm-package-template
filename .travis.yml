@@ -10,6 +10,6 @@ before_script:
   - npm install
 
 script:
-  - npm run build-ci
+  - npm run build:ci
 
 # after_success: npm run report
