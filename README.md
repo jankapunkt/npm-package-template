@@ -1,8 +1,10 @@
 # :package: NPM Package Template :package:
 
+![Test suite](https://github.com/jankapunkt/npm-package-template/workflows/Test%20suite/badge.svg)
 [![Build Status](https://travis-ci.org/jankapunkt/npm-package-template.svg?branch=master)](https://travis-ci.org/jankapunkt/npm-package-template)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+![GitHub](https://img.shields.io/github/license/jankapunkt/npm-package-template)
 
 Minimal tested and fully functional NPM package template project for ES6+ Javascript.
 
@@ -24,6 +26,7 @@ All tools are only defined as **`dev-dependencies`**:
 * [Standard](https://standardjs.com/) for linting
 * [JSDoc](https://jsdoc.app/) for documentation and [jsdoc-to-markdown](https://www.npmjs.com/package/jsdoc-to-markdown) to create docs as markdown files
 * [Travis-CI](https://travis-ci.org/) for continuous integration
+* [GitHub actions](https://github.com/features/actions) for continuous integration
 
 
 ## Getting started
