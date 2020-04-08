@@ -10,7 +10,7 @@
     "test": "mocha --require @babel/register \"tests/**/*.tests.js\"",
     "test:coverage": "cross-env BABEL_ENV= NODE_ENV=test nyc mocha --require @babel/register \"tests/**/*.tests.js\"",
     "test:watch": "npm test -- --watch",
-    "docs": "jsdoc --readme README.md ./lib/*.js -d ./docs && jsdoc2md ./lib/index.js > ./api.md",
+    "docs": "jsdoc --readme README.md ./lib/*.js -d ./docs && jsdoc2md ./lib/*.js > ./api.md",
     "build": "rm -rf ./dist/** && babel lib --out-dir ./dist --ignore *.tests.js --source-maps",
     "build:min": "minify ./dist/index.js --out-file ./dist/index.min.js --mangle.keepFnName --mangle.keepClassName --",
     "build:full": "npm run docs && npm run build && npm run build:min",
