@@ -11,7 +11,7 @@
     "test:coverage": "cross-env BABEL_ENV= NODE_ENV=test nyc --reporter=lcov --reporter=text-summary mocha --require @babel/register \"tests/**/*.tests.js\"",
     "test:watch": "npm test -- --watch",
     "docs": "jsdoc --readme README.md ./lib/*.js -d ./docs && jsdoc2md ./lib/*.js > ./api.md",
-    "build": "rm -rf ./dist/** && babel lib --out-dir ./dist --ignore *.tests.js --source-maps",
+    "build": "rm -rf ./dist/** && rollup -c && babel ./dist/index.js --out-dir ./dist --source-maps",
     "build:min": "minify ./dist/index.js --out-file ./dist/index.min.js --mangle.keepFnName --mangle.keepClassName --",
     "build:full": "npm run docs && npm run build && npm run build:min",
     "build:ci": "npm run lint && npm run test && npm run build:full"
@@ -62,6 +62,7 @@
     "jsdoc-to-markdown": "^5.0.3",
     "mocha": "^7.1.1",
     "nyc": "^15.0.1",
+    "rollup": "^2.30.0",
     "snazzy": "^8.0.0",
     "standard": "^14.3.3"
   }
