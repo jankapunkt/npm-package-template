@@ -4,8 +4,8 @@
   "description": "Look at this great package. Lots of stuff.",
   "main": "dist/index.js",
   "scripts": {
-    "lint": "cd ./lib && standard | snazzy",
-    "lint:fix": "cd ./lib && standard --fix | snazzy",
+    "lint": "standard | snazzy",
+    "lint:fix": "standard --fix | snazzy",
     "lint:test": "npm run lint && npm test",
     "test": "mocha --require @babel/register \"tests/**/*.tests.js\"",
     "test:coverage": "cross-env BABEL_ENV= NODE_ENV=test nyc --reporter=lcov --reporter=text-summary mocha --require @babel/register \"tests/**/*.tests.js\"",
@@ -31,6 +31,13 @@
   "nyc": {
     "sourceMap": false,
     "instrument": false
+  },
+  "standard": {
+    "ignore": [
+      "docs/",
+      "node_modules/",
+      "dist/"
+    ]
   },
   "targets": "> 0.25%, not dead",
   "repository": {
