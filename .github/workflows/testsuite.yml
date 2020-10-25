@@ -27,7 +27,7 @@ jobs:
         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
           ${{ runner.os }}-node-
-    - run: npm install
+    - run: npm ci
     - run: npm run lint
 
   unittest:
@@ -50,14 +50,13 @@ jobs:
         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
           ${{ runner.os }}-node-
-    - run: npm install
+    - run: npm ci
     - run: npm run test:coverage
 
     - name: check coverage
-      uses: devmasx/coverage-check-action@v1.1.0
+      uses: devmasx/coverage-check-action@v1.2.0
       with:
         type: lcov
         result_path: coverage/lcov.info
         min_coverage: 90
-        token: ${{secrets.GITHUB_TOKEN}}
-
+        token: ${{github.token}}

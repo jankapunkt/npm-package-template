@@ -16,7 +16,8 @@ describe('exists', function () {
   it('returns false if the given parameter is undefined or null', function () {
     const expectFalse = value => expect(exists(value)).to.equal(false)
     expectFalse()
-    expectFalse((void 0))
+    // we disable the next line, because we explicitly want to test against void
+    expectFalse((void 0)) // eslint-disable-line
     expectFalse(undefined)
     expectFalse(null)
 
