@@ -1,6 +1,6 @@
 {
   "name": "my-awesome-package",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Look at this great package. Lots of stuff.",
   "main": "dist/index.js",
   "scripts": {
@@ -58,20 +58,20 @@
   },
   "homepage": "https://github.com/jankapunkt/npm-package-template#readme",
   "devDependencies": {
-    "@babel/cli": "^7.13.14",
-    "@babel/core": "^7.13.15",
-    "@babel/preset-env": "^7.13.15",
-    "@babel/register": "^7.13.14",
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/register": "^7.17.0",
     "babel-minify": "^0.5.1",
-    "babel-plugin-istanbul": "^6.0.0",
-    "chai": "^4.3.4",
+    "babel-plugin-istanbul": "^6.1.1",
+    "chai": "^4.3.6",
     "cross-env": "^7.0.3",
-    "jsdoc": "^3.6.6",
-    "jsdoc-to-markdown": "^7.0.1",
-    "mocha": "^8.3.2",
+    "jsdoc": "^3.6.10",
+    "jsdoc-to-markdown": "^7.1.1",
+    "mocha": "^9.2.1",
     "nyc": "^15.1.0",
-    "rollup": "^2.45.1",
+    "rollup": "^2.68.0",
     "snazzy": "^9.0.0",
-    "standard": "^16.0.3"
+    "standard": "^16.0.4"
   }
 }
