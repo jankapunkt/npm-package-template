@@ -1,6 +1,6 @@
 {
   "name": "my-awesome-package",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Look at this great package. Lots of stuff.",
   "main": "dist/index.js",
   "scripts": {
@@ -13,7 +13,6 @@
     "docs": "jsdoc --readme README.md ./lib/*.js -d ./docs && jsdoc2md ./lib/*.js > ./api.md",
     "build": "npm run build:merge && babel ./dist/index.js --out-dir ./dist --source-maps",
     "build:merge": "rm -rf ./dist/** && rollup lib/index.js --file dist/index.js --format 'cjs'",
-    "build:min": "minify ./dist/index.js --out-file ./dist/index.min.js --mangle.keepFnName --mangle.keepClassName --",
     "build:full": "npm run docs && npm run build && npm run build:min",
     "build:ci": "npm run lint && npm run test && npm run build:full"
   },
