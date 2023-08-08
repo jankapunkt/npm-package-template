@@ -1,15 +1,18 @@
-name: Test suite
+name: Publish packages
 
 on:
   push:
     branches:
       - master
-      - develop
+      - release-*
   pull_request:
+    branches:
+      - master
+      - release-*
 
 jobs:
-  lintjs:
-    name: Javascript standard lint
+  docs:
+    name: Build docs
     runs-on: ubuntu-latest
     steps:
       - name: checkout
@@ -28,12 +31,12 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
       - run: npm ci
-      - run: npm run lint
+      - run: npm run docs
 
-  unittest:
-    name: unit tests
+  build:
+    name: Build bundle and publish
     runs-on: ubuntu-latest
-    needs: [lintjs]
+    needs: [docs]
     strategy:
       matrix:
         node: [16, 18, 20]
@@ -53,5 +56,7 @@ jobs:
           key: ${{ runner.os }}-node-${{ matrix.node }}-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-${{ matrix.node }}
-      - run: npm ci
-      - run: npm run test:coverage
+      - run: | 
+          npm ci
+          npm run build
+          npm publish --dry-run

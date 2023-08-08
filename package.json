@@ -46,16 +46,30 @@
     "url": "git+ssh://git@github.com/jankapunkt/npm-package-template.git"
   },
   "keywords": [
-    "awesome",
-    "cool",
-    "great",
-    "swag"
+    "npm",
+    "package",
+    "template",
+    "javascript"
   ],
-  "author": "Jan Küster",
+  "author": "Jan Küster <info@jankuester.com>",
+  "funding": {
+    "type": "PayPal",
+    "url": "https://paypal.me/kuesterjan"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jankapunkt/npm-package-template/issues"
   },
+  "engines": {
+    "node": ">= 14.x"
+  },
+  "files": [
+    "dist",
+    "API.md",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
   "homepage": "https://github.com/jankapunkt/npm-package-template#readme",
   "devDependencies": {
     "@babel/cli": "^7.22.10",
