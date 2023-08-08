@@ -1,6 +1,6 @@
 import { describe, it } from 'mocha'
 import { expect } from 'chai'
-import { exists } from '../lib/utils'
+import { exists } from '../lib/utils.js'
 
 describe('exists', function () {
   it('returns true if the given parameter is defined', function () {

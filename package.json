@@ -10,15 +10,12 @@
     "lint": "standard | snazzy",
     "lint:fix": "standard --fix | snazzy",
     "lint:test": "npm run lint && npm test",
-    "test": "mocha --require @babel/register \"tests/**/*.tests.js\"",
-    "test:coverage": "cross-env BABEL_ENV= NODE_ENV=test nyc --reporter=lcov --reporter=text-summary mocha --require @babel/register \"tests/**/*.tests.js\"",
+    "test": "mocha \"tests/**/*.tests.js\"",
+    "test:coverage": "NODE_ENV=test c8 --all --include=lib/* --reporter=html --reporter=text mocha \"tests/**/*.tests.js\"",
     "test:watch": "npm test -- --watch",
     "docs": "jsdoc --readme README.md ./lib/*.js -d ./docs && jsdoc2md ./lib/*.js > ./api.md",
     "build": "rollup --config rollup.dist.config.js",
-    "build2": "npm run build:merge && babel ./dist/index.js --out-dir ./dist --source-maps",
-    "build:merge": "rm -rf ./dist/** && rollup lib/index.js --file dist/index.js --format 'cjs'",
-    "build:full": "npm run docs && npm run build && npm run build:min",
-    "build:ci": "npm run lint && npm run test && npm run build:full"
+    "build:full": "npm run docs && npm run build"
   },
   "babel": {
     "presets": [
@@ -67,13 +64,12 @@
     "@babel/register": "^7.22.5",
     "@rollup/plugin-babel": "^6.0.3",
     "@rollup/plugin-commonjs": "^25.0.3",
-    "babel-plugin-istanbul": "^6.1.1",
+    "c8": "^8.0.1",
     "chai": "^4.3.7",
     "cross-env": "7.0.3",
     "jsdoc": "^4.0.2",
     "jsdoc-to-markdown": "^8.0.0",
     "mocha": "^10.2.0",
-    "nyc": "^15.1.0",
     "rollup": "^3.27.2",
     "snazzy": "^9.0.0",
     "standard": "^17.1.0"
