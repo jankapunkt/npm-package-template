@@ -1,7 +1,7 @@
 /* global beforeEach afterEach */
 import { describe, it } from 'mocha'
 import { expect } from 'chai'
-import SuperTool from '../lib/SuperTool'
+import { SuperTool } from '../lib/index.js'
 
 describe('SuperTool', function () {
   let tool

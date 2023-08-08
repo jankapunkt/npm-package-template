@@ -1,4 +1,9 @@
-import { exists } from './utils.js'
+/**
+ * Returns true of a given parameter is not null and not undefined.
+ * @param any any input is feasible
+ * @return {boolean} true if defined, otherwise false
+ */
+const exists = any => any !== null && typeof any !== 'undefined';
 
 /**
  * The possible states of the supertool.
@@ -9,7 +14,7 @@ const superToolStates = {
   cool: 'cool',
   awesome: 'awesome',
   swag: 'swag'
-}
+};
 
 /**
  * The super tool class. Holds a state and implements the execute command.
@@ -45,8 +50,8 @@ class SuperTool {
    */
 
   constructor ({ state = SuperTool.states.great } = {}) {
-    SuperTool.validateState(state)
-    this._state = state
+    SuperTool.validateState(state);
+    this._state = state;
   }
 
   /**
@@ -58,8 +63,8 @@ class SuperTool {
 
   state (value) {
     if (exists(value)) {
-      SuperTool.validateState(value)
-      this._state = value
+      SuperTool.validateState(value);
+      this._state = value;
     }
     return this._state
   }
@@ -74,4 +79,5 @@ class SuperTool {
   }
 }
 
-export default SuperTool
+export { SuperTool };
+//# sourceMappingURL=index.js.map
