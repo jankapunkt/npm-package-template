@@ -84,6 +84,14 @@ To build the documentation in development, you need to run
 $ npm run docs
 ``` 
 
+## Contributing and development
+
+We provide an [extensive contribution guideline](./CONTRIBUTING.md) to help you in making your contribution a success!
+
+## Security
+
+Please read our [security policy](./SECURITY.md) to get to know which versions are covered.
+
 ## License
 
 MIT, see [license file](LICENSE)
