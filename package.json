@@ -84,7 +84,7 @@
     "jsdoc": "^4.0.2",
     "jsdoc-to-markdown": "^8.0.0",
     "mocha": "^10.2.0",
-    "rollup": "^3.27.2",
+    "rollup": "^3.28.0",
     "snazzy": "^9.0.0",
     "standard": "^17.1.0"
   }
