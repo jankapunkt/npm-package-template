@@ -73,7 +73,7 @@
   "homepage": "https://github.com/jankapunkt/npm-package-template#readme",
   "devDependencies": {
     "@babel/cli": "^7.23.0",
-    "@babel/core": "^7.23.2",
+    "@babel/core": "^7.23.3",
     "@babel/preset-env": "^7.23.2",
     "@babel/register": "^7.22.15",
     "@rollup/plugin-babel": "^6.0.4",
