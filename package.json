@@ -14,7 +14,7 @@
     "test:coverage": "NODE_ENV=test c8 --all --include=lib/* --reporter=html --reporter=text mocha \"tests/**/*.tests.js\"",
     "test:watch": "npm test -- --watch",
     "docs": "jsdoc --readme README.md ./lib/*.js -d ./docs && jsdoc2md ./lib/*.js > ./api.md",
-    "build": "rollup --config rollup.dist.config.js",
+    "build": "rollup --config rollup.dist.config.js && tsc",
     "build:full": "npm run docs && npm run build"
   },
   "babel": {
@@ -86,6 +86,7 @@
     "mocha": "^10.2.0",
     "rollup": "^4.0.2",
     "snazzy": "^9.0.0",
-    "standard": "^17.1.0"
+    "standard": "^17.1.0",
+    "typescript": "^5.3.3"
   }
 }
